@@ -11,7 +11,7 @@ typedef void (*REPLACEIDTENTRYINONEMOD)(
 	PROC pfnNew,
 	HMODULE hmodCaller);
 
-typedef int(*MESSAGEBOXA)(
+typedef int(WINAPI *MESSAGEBOXA)(//必须加上WINAPI，应为函数原型有，如果不加入，则会在运行时报错。
   HWND hWnd,
   LPCSTR lpText,
   LPCTSTR lpCaption,
